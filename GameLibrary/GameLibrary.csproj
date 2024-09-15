@@ -43,9 +43,10 @@
   <ItemGroup>
     <Compile Include="Enums\CardValue.cs" />
     <Compile Include="Enums\CardSuit.cs" />
+    <Compile Include="BlackjackDeck.cs" />
     <Compile Include="Models\DeckModel.cs" />
     <Compile Include="Models\PlayingCardModel.cs" />
-    <Compile Include="Models\PokerDeckModel.cs" />
+    <Compile Include="PokerDeck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

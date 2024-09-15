@@ -9,7 +9,7 @@ namespace GameLibrary.Shared
         protected List<PlayingCardModel> drawPile = new List<PlayingCardModel>();
         protected List<PlayingCardModel> discardPile = new List<PlayingCardModel>();
 
-        public void CreateDeck()
+        internal void CreateDeck()
         {
             fullDeck.Clear();
 
@@ -28,14 +28,14 @@ namespace GameLibrary.Shared
             drawPile = fullDeck.OrderBy(x => random.Next()).ToList();
         }
 
-        public virtual PlayingCardModel RequestCard()
+        protected virtual PlayingCardModel DrawOneCard()
         {
             PlayingCardModel output = drawPile.Take(1).First();
             drawPile.Remove(output);
             return output;
         }
 
-        public abstract List<PlayingCardModel> DealCard();
+        public abstract List<PlayingCardModel> DealCards();
 
     }
 }
